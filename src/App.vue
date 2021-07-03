@@ -1,14 +1,14 @@
 <template>
   <div>
       <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-      <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
-      <ScriptSetup />
+      <HelloWorld msg="Hello Vue 3 + Vite" />
+      <MyInstance />
   </div>
 </template>
 
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import ScriptSetup from './components/ScriptSetup.vue'
+import MyInstance from './components/MyInstance.vue'
 
 // This starter template is using Vue 3 experimental <script setup> SFCs
 // Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
