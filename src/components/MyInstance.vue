@@ -21,7 +21,7 @@
 </template>
 
 <script setup="props">
-  import {ref, reactive, toRefs, computed, watch} from 'vue'
+  import {ref, reactive, toRefs, computed, watch, warn, watchEffect} from 'vue'
   const num = ref(1) // num.value -> 1; 数字、字符串等简单数据类型响应, 响应式包装对象
   const car = ref(2)
   const state = reactive({  // 返回对象的响应式副本
@@ -45,6 +45,8 @@
   watch(num, (num, prevNum) => {
     debugger
   })
+
+  watchEffect(()=> console.log(`value:${num.value}`))
 
 </script>
 
