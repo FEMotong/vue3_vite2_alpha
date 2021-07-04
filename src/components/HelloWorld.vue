@@ -1,18 +1,7 @@
 <template>
-    <h1>{{ msg }}</h1>
-
-    <button type="button" @click="state.count++">count is: {{ state.count }}</button>
+    <h1>Hello Vue 3 + Vite</h1>
+    <router-link to="/MyInstance">Go to MyInstance</router-link>
 </template>
-
-<script setup>
-import { defineProps, reactive } from 'vue'
-
-defineProps({
-  msg: String
-})
-
-const state = reactive({ count: 0 })
-</script>
 
 <style scoped>
 a {

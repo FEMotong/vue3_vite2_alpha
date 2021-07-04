@@ -1,4 +1,5 @@
 <template>
+    <h1>Vue3新特性</h1>
     <span>{{ num }}</span>
     <br />
     <button @click="add">+1</button>
@@ -19,6 +20,9 @@
     <MyChild1 />
     <br />
     <button @click="changeTitle">改变标题</button>
+    <br />
+    <br />
+    <router-link to="/">Go Back</router-link>
 </template>
 
 <script setup="props">
