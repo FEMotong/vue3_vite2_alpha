@@ -1,9 +1,7 @@
 <template>
-  <div>
-      <h1>{{ msg }}</h1>
+    <h1>{{ msg }}</h1>
 
-      <button type="button" @click="state.count++">count is: {{ state.count }}</button>
-  </div>
+    <button type="button" @click="state.count++">count is: {{ state.count }}</button>
 </template>
 
 <script setup>

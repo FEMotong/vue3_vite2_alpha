@@ -1,8 +1,6 @@
 <template>
-    <Fragment>
-        MyChild1 component --
-        <MyChild2 />
-    </Fragment>
+    MyChild1 component --
+    <MyChild2 />
 </template>
 
 <script setup>

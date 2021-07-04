@@ -1,26 +1,24 @@
 <template>
-    <Fragment>
-        <span>{{ num }}</span>
-        <br />
-        <button @click="add">+1</button>
-        <button @click="subtract">-1</button>
-        <br />
-        <span>{{state.count}}</span>
-        <br />
-        <span>state.num：{{state.count}}-num.value{{state.num}}</span>
-        <br />
-        <button @click="changeCount">改变state.count</button>
-        <button @click="changeNum">改变state.num</button>
-        <br />  
-        <p>toRefs：</p>
-        <!-- <span>num：{{ num }}-count：{{count}}</span> -->
-        <br />
-        <span>getNumComputed: {{getNumComputed}}</span>  
-        <br />
-        <MyChild1 />
-        <br />
-        <button @click="changeTitle">改变标题</button>
-    </Fragment>
+    <span>{{ num }}</span>
+    <br />
+    <button @click="add">+1</button>
+    <button @click="subtract">-1</button>
+    <br />
+    <span>{{state.count}}</span>
+    <br />
+    <span>state.num：{{state.count}}-num.value{{state.num}}</span>
+    <br />
+    <button @click="changeCount">改变state.count</button>
+    <button @click="changeNum">改变state.num</button>
+    <br />  
+    <p>toRefs：</p>
+    <!-- <span>num：{{ num }}-count：{{count}}</span> -->
+    <br />
+    <span>getNumComputed: {{getNumComputed}}</span>  
+    <br />
+    <MyChild1 />
+    <br />
+    <button @click="changeTitle">改变标题</button>
 </template>
 
 <script setup="props">

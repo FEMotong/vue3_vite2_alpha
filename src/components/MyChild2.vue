@@ -1,11 +1,9 @@
 <template>
-    <Fragment>
-        MyChild2 component
-        <br />
-        <span>{{ bookTemp }}</span>
-        <br />
-        <span>myTitle: {{myTitle}}</span>
-    </Fragment>
+    MyChild2 component
+    <br />
+    <span>{{ bookTemp }}</span>
+    <br />
+    <span>myTitle: {{myTitle}}</span>
 </template>
 
 <script setup>

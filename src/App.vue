@@ -1,11 +1,8 @@
 <template>
-  <div>
-      <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-      <HelloWorld msg="Hello Vue 3 + Vite" />
-      <MyInstance />
-  </div>
+    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+    <HelloWorld msg="Hello Vue 3 + Vite" />
+    <MyInstance />
 </template>
-
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import MyInstance from './components/MyInstance.vue'
