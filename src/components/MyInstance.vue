@@ -32,11 +32,13 @@
     onMounted, 
     onUpdated, 
     onUnmounted,
-    provide 
+    provide,
+    readonly 
   } from 'vue'
   import MyChild1 from './MyChild1.vue'
 
   const num = ref(1) // num.value -> 1; 数字、字符串等简单数据类型响应, 响应式包装对象
+  // const num = readonly(ref(1)) // num.value -> 1; 数字、字符串等简单数据类型响应, 响应式包装对象
   const car = ref(2)
   const state = reactive({  // 返回对象的响应式副本
     count: 2,
