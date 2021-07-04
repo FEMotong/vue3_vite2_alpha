@@ -17,22 +17,45 @@
         <br />
         <span>getNumComputed: {{getNumComputed}}</span>  
         <br />
+        <MyChild1 />
+        <br />
+        <button @click="changeTitle">改变标题</button>
     </Fragment>
 </template>
 
 <script setup="props">
-  import {ref, reactive, toRefs, computed, watch, warn, watchEffect, onMounted, onUpdated, onUnmounted} from 'vue'
+  import { 
+    ref, 
+    reactive, 
+    toRefs, 
+    computed, 
+    watch, 
+    watchEffect, 
+    onMounted, 
+    onUpdated, 
+    onUnmounted,
+    provide 
+  } from 'vue'
+  import MyChild1 from './MyChild1.vue'
+
   const num = ref(1) // num.value -> 1; 数字、字符串等简单数据类型响应, 响应式包装对象
   const car = ref(2)
   const state = reactive({  // 返回对象的响应式副本
     count: 2,
     num,
   })
+
+  const myTitle = ref("Vue3_vite2项目实战")
+
+  provide('book', '西游记') // 跨组件注入
+  provide('myTitle', myTitle) // 跨组件注入，响应对象
+
   const add = ()=> num.value++;
   const subtract = ()=> num.value--;
   const changeCount = ()=> state.count++;
   const changeNum = ()=> state.num++; // reactive 将解包所有深层的 refs，同时维持 ref 的响应性。
   const getNumComputed = computed(() => num.value + 10)
+  const changeTitle = () => myTitle.value = '最佳方案实践！'
 
   // 观察一个getter
   watch(
@@ -57,6 +80,8 @@
   onUnmounted(() => {
     debugger
   })
+
+
 </script>
 
 <!--
